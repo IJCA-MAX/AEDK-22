@@ -1,0 +1,394 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AEDK - Association pour l'Éducation et le Développement de Keur Massar</title>
+    <meta name="description" content="L'APEDK agit pour l'éducation, la formation et le développement communautaire à Keur Massar. Soutenez nos actions via Wave (784685083) ou Orange Money.">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        /* Styles avec couleurs bleu, blanc, noir */
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            line-height: 1.6;
+            color: #333;
+            background: #fff;
+        }
+
+        header {
+            background: #0056b3;
+            /* Bleu principal */
+            color: #fff;
+            padding: 1.5rem 0;
+            text-align: center;
+            border-bottom: 3px solid #000;
+        }
+
+        nav {
+            display: flex;
+            justify-content: center;
+            background: #000;
+            /* Noir */
+            padding: 0.8rem;
+            flex-wrap: wrap;
+        }
+
+        nav a {
+            color: #fff;
+            margin: 0 15px;
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 1.1rem;
+        }
+
+        .hero {
+            background: url('https://via.placeholder.com/1920x600?text=Keur+Massar+Éducation') no-repeat center/cover;
+            color: #fff;
+            text-align: center;
+            padding: 6rem 1rem;
+            position: relative;
+        }
+
+        .hero::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.5);
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 1;
+        }
+
+        .container {
+            width: 85%;
+            margin: auto;
+            overflow: hidden;
+        }
+
+        .btn {
+            display: inline-block;
+            background: #0056b3;
+            /* Bleu */
+            color: #fff;
+            padding: 12px 25px;
+            text-decoration: none;
+            border-radius: 5px;
+            margin-top: 1rem;
+            font-weight: bold;
+            transition: background 0.3s;
+            border: 2px solid #000;
+        }
+
+        .btn:hover {
+            background: #003d7a;
+        }
+
+        h2 {
+            text-align: center;
+            color: #0056b3;
+            margin-bottom: 2rem;
+            font-size: 2.2rem;
+        }
+
+        .mission,
+        .projects,
+        .news,
+        .team {
+            background: #f9f9f9;
+            border-top: 2px solid #0056b3;
+            border-bottom: 2px solid #0056b3;
+        }
+
+        .values {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 30px;
+            margin-top: 2rem;
+        }
+
+        .value-card {
+            flex: 1;
+            min-width: 250px;
+            background: #fff;
+            padding: 1.5rem;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            border: 1px solid #ddd;
+        }
+
+        .project-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+            margin-top: 2rem;
+        }
+
+        .project-card {
+            background: #fff;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            border: 1px solid #000;
+        }
+
+        .project-card img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+        }
+
+        .project-info {
+            padding: 1.5rem;
+        }
+
+        footer {
+            background: #000;
+            color: #fff;
+            text-align: center;
+            padding: 2rem 0;
+            border-top: 3px solid #0056b3;
+        }
+
+        .footer-links {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 20px;
+            margin: 1.5rem 0;
+        }
+
+        .footer-links a {
+            color: #fff;
+            text-decoration: none;
+        }
+
+        .social-icons a {
+            color: #fff;
+            margin: 0 15px;
+            font-size: 1.5rem;
+        }
+
+        .don-section {
+            background: #0056b3;
+            color: #fff;
+            padding: 2rem;
+            text-align: center;
+            margin: 2rem 0;
+            border-radius: 8px;
+        }
+
+        .don-method {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            margin-top: 1rem;
+            flex-wrap: wrap;
+        }
+
+        .don-method div {
+            background: #fff;
+            color: #0056b3;
+            padding: 1rem;
+            border-radius: 5px;
+            font-weight: bold;
+            min-width: 200px;
+        }
+
+        @media (max-width: 768px) {
+            nav {
+                flex-direction: column;
+                align-items: center;
+                gap: 10px;
+            }
+
+            .hero {
+                padding: 4rem 1rem;
+            }
+        }
+
+    </style>
+</head>
+
+<body>
+    <!-- En-tête -->
+    <header>
+        <div class="container">
+            <h1 style="margin: 0; font-size: 2.5rem;">AEDK</h1>
+            <p style="margin: 0; font-size: 1.2rem;">Association pour l'Éducation et le Développement de Keur Massar</p>
+        </div>
+    </header>
+
+    <!-- Navigation -->
+    <nav>
+        <a href="#home">Accueil</a>
+        <a href="#mission">Notre Mission</a>
+        <a href="#values">Nos Valeurs</a>
+        <a href="#projects">Nos Projets</a>
+        <a href="#team">Notre Équipe</a>
+        <a href="#contact">Contact</a>
+        <a href="#donate" style="color: #fff; background: #0056b3; padding: 5px 10px; border-radius: 5px;">Faire un Don</a>
+    </nav>
+
+    <!-- Bannière Hero -->
+    <section class="hero" id="home">
+        <div class="hero-content">
+            <div class="container">
+                <h2 style="color: #fff; font-size: 2.5rem; margin-bottom: 1rem;">Éduquer, Former, Développer</h2>
+                <p style="font-size: 1.2rem; max-width: 800px; margin: 0 auto 2rem;">Nous œuvrons pour l'épanouissement de la communauté de Keur Massar à travers l'éducation, la formation professionnelle et des projets de développement durable.</p>
+                <a href="#donate" class="btn">Soutenir nos actions</a>
+                <a href="#contact" class="btn" style="background: #fff; color: #0056b3;">Nous rejoindre</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section Mission -->
+    <section class="mission" id="mission">
+        <div class="container">
+            <h2>Notre Mission</h2>
+            <p style="text-align: center; max-width: 800px; margin: 0 auto; font-size: 1.1rem;">L'AEDK a pour objectif principal d'améliorer les conditions de vie des habitants de Keur Massar en favorisant l'accès à une éducation de qualité, en promouvant la formation professionnelle des jeunes et en soutenant des initiatives locales de solidarité et de développement durable.</p>
+        </div>
+    </section>
+
+    <!-- Section Valeurs -->
+    <section class="values" id="values">
+        <div class="container">
+            <h2>Nos Valeurs</h2>
+            <div class="values">
+                <div class="value-card">
+                    <i class="fas fa-graduation-cap" style="font-size: 3rem; color: #0056b3;"></i>
+                    <h3>Éducation pour tous</h3>
+                    <p>Promouvoir un accès équitable à l'éducation, notamment pour les filles et les enfants défavorisés.</p>
+                </div>
+                <div class="value-card">
+                    <i class="fas fa-hands-helping" style="font-size: 3rem; color: #0056b3;"></i>
+                    <h3>Solidarité communautaire</h3>
+                    <p>Travailler main dans la main avec les populations locales pour des solutions durables.</p>
+                </div>
+                <div class="value-card">
+                    <i class="fas fa-leaf" style="font-size: 3rem; color: #0056b3;"></i>
+                    <h3>Développement durable</h3>
+                    <p>Intégrer les dimensions environnementales dans tous nos projets.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section Projets -->
+    <section class="projects" id="projects">
+        <div class="container">
+            <h2>Nos Projets Phares</h2>
+            <div class="project-grid">
+                <div class="project-card">
+                    <img src="https://via.placeholder.com/400x300?text=École+Primaire" alt="École Primaire">
+                    <div class="project-info">
+                        <h3>Scolarisation des enfants</h3>
+                        <p>Organiser des cours de soutien scolaire.</p>
+                        <p>Sensibilisation des parents à l'importance de l'éducation.</p>
+                        <a href="#" style="color: #0056b3; font-weight: bold;">En savoir plus →</a>
+                    </div>
+                </div>
+                <div class="project-card">
+                    <img src="https://via.placeholder.com/400x300?text=Formation+Professionnelle" alt="Formation Professionnelle">
+                    <div class="project-info">
+                        <h3>Centre de formation</h3>
+                        <p>Ateliers de couture, menuiserie et agriculture pour l'autonomie des jeunes adultes.</p>
+                        <a href="#" style="color: #0056b3; font-weight: bold;">En savoir plus →</a>
+                    </div>
+                </div>
+                <div class="project-card">
+                    <img src="https://via.placeholder.com/400x300?text=Jardin+Communautaire" alt="Jardin Communautaire">
+                    <div class="project-info">
+                        <h3>Solidarité communautaire</h3>
+                        <p>AEDK favorise l'entraide entre leurs membres et les bénéficiaires de leurs actions.</p>
+                        <p>AEDK encourage ses membres à s'engager activement dans des actions de solidarité.</p>
+                        <a href="#" style="color: #0056b3; font-weight: bold;">En savoir plus →</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section Équipe -->
+    <section class="team" id="team">
+        <div class="container">
+            <h2>Notre Équipe</h2>
+            <p style="text-align: center; max-width: 800px; margin: 0 auto 2rem;">Une équipe dévouée travaille quotidiennement pour mener à bien nos missions.</p>
+            <div style="display: flex; justify-content: center; flex-wrap: wrap; gap: 30px;">
+                <div style="text-align: center;">
+                    <img src="https://via.placeholder.com/150?text=Ibrahima+J.C.+Aw" alt="Président" style="border-radius: 50%; width: 150px; height: 150px; object-fit: cover; border: 3px solid #0056b3;">
+                    <h3>Ibrahima Jean Claud Aw</h3>
+                    <p>Président</p>
+                </div>
+                <div style="text-align: center;">
+                    <img src="https://via.placeholder.com/150?text=Fatou+Diallo" alt="Secrétaire Générale" style="border-radius: 50%; width: 150px; height: 150px; object-fit: cover; border: 3px solid #0056b3;">
+                    <h3>Fatou Diallo</h3>
+                    <p>Secrétaire Générale</p>
+                </div>
+                <div style="text-align: center;">
+                    <img src="https://via.placeholder.com/150?text=Mame+Coumba+Ndiaye" alt="Trésorière" style="border-radius: 50%; width: 150px; height: 150px; object-fit: cover; border: 3px solid #0056b3;">
+                    <h3>Mame Coumba Souna Ndiaye Aw</h3>
+                    <p>Trésorière</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section Dons -->
+    <section id="donate" class="don-section">
+        <div class="container">
+            <h2 style="color: #fff;">Soutenez nos actions</h2>
+            <p>Votre don permet de financer directement nos projets sur le terrain. Utilisez les moyens de paiement ci-dessous :</p>
+            <div class="don-method">
+                <div>
+                    <i class="fas fa-money-bill-wave" style="font-size: 2rem; margin-bottom: 10px;"></i><br>
+                    <span>Wave</span><br>
+                    <strong>+221 78 468 50 83</strong>
+                </div>
+                <div>
+                    <i class="fas fa-mobile-alt" style="font-size: 2rem; margin-bottom: 10px;"></i><br>
+                    <span>Orange Money</span><br>
+                    <strong>+221 78 468 50 83</strong>
+                </div>
+            </div>
+            <p style="margin-top: 1.5rem; font-style: italic;">Merci pour votre générosité !</p>
+        </div>
+    </section>
+
+    <!-- Pied de page -->
+    <footer id="contact">
+        <div class="container">
+            <h3 style="margin-bottom: 1.5rem; color: #fff;">Contactez-nous</h3>
+            <p><i class="fas fa-map-marker-alt"></i> Siège social : Keur Massar, Sénégal</p>
+            <p><i class="fas fa-phone"></i> +221 78 468 50 83</p>
+            <p><i class="fas fa-envelope"></i> contact@aedk22@gmail.com</p>
+
+            <div class="footer-links">
+                <a href="#home">Accueil</a>
+                <a href="#mission">Mission</a>
+                <a href="#projects">Projets</a>
+                <a href="#team">Équipe</a>
+                <a href="#donate">Dons</a>
+            </div>
+
+            <div class="social-icons">
+                <a href="#"><i class="fab fa-facebook"></i></a>
+                <a href="#"><i class="fab fa-twitter"></i></a>
+                <a href="#"><i class="fab fa-instagram"></i></a>
+            </div>
+
+            <p>&copy; 2024 AEDK - Tous droits réservés</p>
+        </div>
+    </footer>
+</body>
+
+</html>
